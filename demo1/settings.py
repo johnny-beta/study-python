@@ -14,7 +14,7 @@ BOT_NAME = 'demo1'
 SPIDER_MODULES = ['demo1.spiders']
 NEWSPIDER_MODULE = 'demo1.spiders'
 
-IMAGES_STORE = 'D:\meizi2'
+IMAGES_STORE = 'D:\meizi1'
 #启动pipeline中间件
 ITEM_PIPELINES = {
    'demo1.pipelines.MyDemo1Pipeline': 300,

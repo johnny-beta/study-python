@@ -14,16 +14,17 @@ class MyDemo1Pipeline(ImagesPipeline):
     def get_media_requests(self, item, info):
         for image_url in item['imgUrl']:
             print('ss__',image_url)
-            yield Request(image_url,meta={'item':item['name']})
+            yield Request(image_url,meta={'item':item['name'],'i':item['i']})
 
  
     def file_path(self, request, response=None, info=None):
         name = request.meta['item']
+        i = request.meta['i']
         # name = filter(lambda x: x not in '()0123456789', name)
-        name = re.sub(r'[？\\*|“<>:/()0123456789]', '', name)
+        # name = re.sub(r'[？\\*|“<>:/()0123456789]', '', name)
         image_guid = request.url.split('/')[-1]
         # name2 = request.url.split('/')[-2]
-        filename = u'full/{0}/{1}'.format(name, image_guid)
+        filename = u'{0}/{1}/{2}'.format(i,name, image_guid)
         return filename
         # return 'full/%s' % (image_guid)
 

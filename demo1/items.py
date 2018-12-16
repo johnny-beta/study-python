@@ -13,4 +13,5 @@ class Demo1Item(scrapy.Item):
     # name = scrapy.Field()
     name = scrapy.Field()
     imgUrl = scrapy.Field()
+    i = scrapy.Field()
     pass
