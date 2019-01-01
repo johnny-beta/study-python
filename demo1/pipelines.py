@@ -13,7 +13,7 @@ class MyDemo1Pipeline(ImagesPipeline):
         
     def get_media_requests(self, item, info):
         for image_url in item['imgUrl']:
-            print('ss__',image_url)
+            print('urls__',image_url)
             yield Request(image_url,meta={'item':item['name'],'i':item['i']})
 
  

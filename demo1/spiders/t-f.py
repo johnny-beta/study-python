@@ -4,13 +4,13 @@ import re
 from demo1.items import Demo1Item
 
 class TSpider(scrapy.Spider):
-    name = 't'
-    dynamic_domain = '553sa.com'
+    name = 't-f'
+    dynamic_domain = '559ci.com'
     allowed_domains = [dynamic_domain]
     start_urls =[]
     start_urls.append('https://www.'+dynamic_domain+'/html/news/69/')
-    for i in range(11,13):
-       start_urls.append('https://www.'+dynamic_domain+'/html/news/69/'+ str(i)+'.html')
+    #for i in range(11,13):
+       #start_urls.append('https://www.'+dynamic_domain+'/html/news/69/'+ str(i)+'.html')
        #start_urls.append('https://www.'+dynamic_domain+'/html/news/7/')
        
     def parse(self, response):
