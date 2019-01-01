@@ -5,12 +5,11 @@ from demo1.items import Demo1Item
 
 class TSpider(scrapy.Spider):
     name = 't'
-    dynamic_domain = '551ci.com'
+    dynamic_domain = '553sa.com'
     allowed_domains = [dynamic_domain]
     start_urls =[]
-    #for i in range(21,30):
+    start_urls.append('https://www.'+dynamic_domain+'/html/news/69/')
     for i in range(11,13):
-       #start_urls.append('https://www.'+dynamic_domain+'/html/news/69/')
        start_urls.append('https://www.'+dynamic_domain+'/html/news/69/'+ str(i)+'.html')
        #start_urls.append('https://www.'+dynamic_domain+'/html/news/7/')
        
