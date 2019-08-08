@@ -5,7 +5,7 @@ from demo1.items import Demo1Item
 
 class TSpider(scrapy.Spider):
     name = 't-f'
-    dynamic_domain = '127fb.com'
+    dynamic_domain = '955ti.com'
     allowed_domains = [dynamic_domain]
     start_urls =[]
     start_urls.append('https://www.'+dynamic_domain+'/pic/html28/')
